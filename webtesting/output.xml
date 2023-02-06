@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220602 22:59:06.741" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes2" source="C:\Users\japa lima\Desktop\CursoRobot\Webtesting\amazon_testes2.robot">
+<test id="s1-t1" name="Caso de teste 03 - Adicionar Produto no Carrinho" line="8">
+<kw name="Abrir navegador" library="amazon_resources2" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220602 22:59:07.405" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220602 22:59:07.404" endtime="20220602 22:59:10.731"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220602 22:59:10.731" endtime="20220602 22:59:11.254"/>
+</kw>
+<status status="PASS" starttime="20220602 22:59:07.401" endtime="20220602 22:59:11.254"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources2">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220602 22:59:11.257" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20220602 22:59:11.256" endtime="20220602 22:59:15.302"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_VENDAS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220602 22:59:15.302" endtime="20220602 22:59:16.289"/>
+</kw>
+<status status="PASS" starttime="20220602 22:59:11.255" endtime="20220602 22:59:16.290"/>
+</kw>
+<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" library="amazon_resources2" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=twotabsearchtextbox</arg>
+<arg>text=${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220602 22:59:16.309" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220602 22:59:16.308" endtime="20220602 22:59:17.616"/>
+</kw>
+<status status="PASS" starttime="20220602 22:59:16.308" endtime="20220602 22:59:17.616"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" library="amazon_resources2">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220602 22:59:17.621" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20220602 22:59:17.621" endtime="20220602 22:59:22.117"/>
+</kw>
+<status status="PASS" starttime="20220602 22:59:17.620" endtime="20220602 22:59:22.118"/>
+</kw>
+<kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Console Xbox Series S&quot;" library="amazon_resources2">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${XBOX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220602 22:59:22.120" endtime="20220602 22:59:22.241"/>
+</kw>
+<status status="PASS" starttime="20220602 22:59:22.119" endtime="20220602 22:59:22.242"/>
+</kw>
+<kw name="Fechar navegador" library="amazon_resources2" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220602 22:59:22.244" endtime="20220602 22:59:24.787"/>
+</kw>
+<status status="PASS" starttime="20220602 22:59:22.243" endtime="20220602 22:59:24.788"/>
+</kw>
+<doc>Esse teste verifica a adição de um produto no carrinho de compras</doc>
+<tag>adicionar_carrinho</tag>
+<status status="PASS" starttime="20220602 22:59:07.398" endtime="20220602 22:59:24.789"/>
+</test>
+<doc>Essa suite verifica o site da Amazon.com.br</doc>
+<status status="PASS" starttime="20220602 22:59:06.746" endtime="20220602 22:59:24.791"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">adicionar_carrinho</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes2">Amazon Testes2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
